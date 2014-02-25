@@ -1,0 +1,37 @@
+{
+  "name": "JadeSiteTemplate",
+  "version": "0.0.0",
+  "description": "scaffolding for static html sites using jade and stylus",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "~3.5.2",
+    "gulp-util": "~2.2.14"
+  },
+  "devDependencies": {
+    "gulp": "~3.5.2",
+    "gulp-concat": "~2.1.7",
+    "gulp-rename": "~1.1.0",
+    "gulp-uglify": "~0.2.1",
+    "gulp-jshint": "~1.4.2",
+    "gulp-stylus": "0.0.13",
+    "gulp-jade": "~0.4.2",
+    "gulp-autoprefixer": "0.0.6",
+    "gulp-notify": "~1.0.0-beta"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andyroo2000/JadeProjectStarter.git"
+  },
+  "keywords": [
+    "jade"
+  ],
+  "author": "Andrew Landry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andyroo2000/JadeProjectStarter/issues"
+  },
+  "homepage": "https://github.com/andyroo2000/JadeProjectStarter"
+}
