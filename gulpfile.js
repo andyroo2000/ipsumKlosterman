@@ -6,7 +6,6 @@ var stylus = require('gulp-stylus');
 var jade = require('gulp-jade');
 var autoprefixer = require('gulp-autoprefixer');
 var notify = require("gulp-notify");
-var rename = require("gulp-rename");
 
 // Run jsHint
 gulp.task('hint', function() {
@@ -28,7 +27,6 @@ gulp.task('uglify', function() {
 gulp.task('jade-pretty', function() {
   return gulp.src('source-files/*.jade')
     .pipe(jade({pretty: true}))
-    .on('error', notify.onError())
     .pipe(gulp.dest('compiled-site/pretty'));
 });
 
@@ -36,7 +34,6 @@ gulp.task('jade-pretty', function() {
 gulp.task('jade-ugly', function() {
   return gulp.src('source-files/*.jade')
     .pipe(jade())
-    .pipe(rename('home.html'))
     .pipe(gulp.dest('compiled-site/ugly'));
 });
 

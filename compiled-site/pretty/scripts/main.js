@@ -18,7 +18,6 @@ var helpers = {
 };
 
 var lorem = {
-
   word: function() {
     var randomNumber = random.number(textArray.length);
     var result = '';
@@ -53,7 +52,7 @@ var lorem = {
   },
   paragraphs: function(num) {
     var result = [];
-    for (var i = 0; i > num; i++) {
+    for (var i = 0; i < num; i++) {
       result.push(this.paragraph());
     }
     return result.join('\n\n');
@@ -67,8 +66,14 @@ var myApp = angular.module('loremKlosterman', []);
 myApp.controller('Paragraphs', ['$scope', function ($scope) {
   $scope.$watch('number', function () {
     $scope.text = lorem.paragraphs($scope.number);
+    console.log($scope.number);
+    console.log(lorem.paragraphs(3));
   });
 }]);
+
+myApp.controller('test', function () {
+  $scope.testText = "hello!";
+});
 
 myApp.filter('newLineToArray', function() {
   return function(text) {
@@ -76,3 +81,6 @@ myApp.filter('newLineToArray', function() {
     return result;
   };
 });
+
+
+
