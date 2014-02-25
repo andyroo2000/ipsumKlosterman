@@ -1,4 +1,6 @@
-*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
-h1{color:#f00}
-a{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
-p{font-size:.5em}
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+* h1{font-family:helvetica;font-size:3em;letter-spacing:.115em}
+* p{padding-bottom:.02em}
+* input{border-color:#000 2px;font-size:2em;margin-bottom:.5em}
+* .content{width:50%;margin:0 auto;padding:1em;background-color:RGB(235,244,246);font:"coronette"}
+* .paper{background-color:#fff;margin:2em;padding:3em;line-height:1.5em;min-height:40em}

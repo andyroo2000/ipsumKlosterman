@@ -39,11 +39,10 @@ gulp.task('jade-ugly', function() {
 
 
 // Compile Stylus to prefixed and pretty CSS
-gulp.task('stylus', function() {
+gulp.task('stylus-pretty', function() {
   return gulp.src('source-files/styles/*.styl')
     .pipe(stylus())
     .pipe(autoprefixer('last 2 versions', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-    .on('error', notify.onError())
     .pipe(gulp.dest('compiled-site/pretty/styles'));
 });
 
@@ -59,14 +58,14 @@ gulp.task('stylus', function() {
 // Watch files for changes
 gulp.task('watch', function() {
   gulp.watch('source-files/scripts/*.js', ['hint', 'uglify']);
-  gulp.watch('source-files/*.jade', ['jade']);
-  gulp.watch('source-files/_*.jade', ['jade']);
-  gulp.watch('source-files/styles/*.styl', ['stylus']);
+  gulp.watch('source-files/*.jade', ['jade-pretty']);
+  gulp.watch('source-files/_*.jade', ['jade-pretty']);
+  gulp.watch('source-files/styles/*.styl', ['stylus-pretty']);
 });
 
 
 
 // The mega-task that runs when you type 'gulp' at the command line
 gulp.task('default', function(){
-  gulp.start('hint', 'uglify', 'jade-pretty', 'jade-ugly', 'stylus', 'watch');
+  gulp.start('hint', 'uglify', 'jade-pretty', 'jade-ugly', 'stylus', 'stylus-pretty', 'watch');
 });

@@ -1,20 +1,22 @@
+meta(http-equiv="content-type", content="text/html; charset=UTF-8")
 doctype html
 html(ng-app="loremKlosterman")
   include partials/_header.jade
 body
   include partials/_nav.jade
 
-  - var pageName = 'Index'
+  .content
+    
+    h1.
+      LOREM KLOSTERMAN*
 
-  h1.
-    #{pageName} Page
+    div(ng-controller="Paragraphs")
 
-  div(ng-controller="Paragraphs")
-
-    input(type="text" ng-model="number")
-    p(ng-repeat="paragraph in text|newLineToArray track by $index")
-      {{paragraph}}
+      input(type="text" ng-model="number" placeholder="enter a number")
+      .paper
+        p(ng-repeat="paragraph in text|newLineToArray track by $index")
+          {{paragraph}}
 
 
-include partials/_footer.jade
+  include partials/_footer.jade
 

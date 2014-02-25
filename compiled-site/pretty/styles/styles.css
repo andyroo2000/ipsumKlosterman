@@ -1,0 +1,32 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+* h1 {
+  font-family: helvetica;
+  font-size: 3em;
+  letter-spacing: 0.115em;
+}
+* p {
+  padding-bottom: 0.02em;
+}
+* input {
+  border-color: #000 2px;
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+* .content {
+  width: 50%;
+  margin: 0 auto;
+  padding: 1em;
+  background-color: RGB(235, 244, 246);
+  font: "coronette";
+}
+* .paper {
+  background-color: #fff;
+  margin: 2em;
+  padding: 3em;
+  line-height: 1.5em;
+  min-height: 40em;
+}
