@@ -1,0 +1,18 @@
+doctype html
+html(ng-app="loremKlosterman")
+  include partials/_header.jade
+body
+  include partials/_nav.jade
+
+  - var pageName = 'Index'
+
+  h1.
+    #{pageName} Page
+
+  div(ng-controller="Paragraphs")
+
+    input(type="text" ng-model="number")
+    p(ng-repeat="paragraph in text | newLineToArray track by $index")
+      {{paragraph}}
+
+include partials/_footer.jade
