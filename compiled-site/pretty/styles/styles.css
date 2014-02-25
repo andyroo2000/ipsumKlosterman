@@ -15,16 +15,26 @@
   border-color: #000 2px;
   font-size: 2em;
   margin-bottom: 0.5em;
+  cursor: pointer;
+}
+* input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  cursor: pointer;
+  display: block;
+  width: 8px;
+  color: #333;
+  text-align: center;
+  position: relative;
 }
 * .content {
   width: 50%;
   margin: 0 auto;
   padding: 1em;
   background-color: RGB(235, 244, 246);
-  font: "coronette";
+  font-family: "minion-pro";
 }
 * .paper {
-  background-color: #fff;
+  background-color: RGB(253, 255, 252);
   margin: 2em;
   padding: 3em;
   line-height: 1.5em;
